@@ -8,20 +8,20 @@ JOB:
   runs-on: ubuntu-latest
 
   steps:
-    -name: code checkout
-     uses: actions/checkout@v3
+    - name: code checkout
+      uses: actions/checkout@v3
 
-    -name: setup python
-     uses: actions/setup-python@v2
-     with:
-      python-version: ['3.9']
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+       python-version: ['3.9']
 
-    -name: insatll flake8
-     runs: |
-      python -m pip install --upgrade pip
-      pip install flake8
+    - name: insatll flake8
+      runs: |
+       python -m pip install --upgrade pip
+       pip install flake8
 
-    -name: run flake8
-     runs: |
-      flake8 app.py
+    - name: run flake8
+      runs: |
+       flake8 app.py
 
